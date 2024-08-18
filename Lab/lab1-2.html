@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account</title>
+    <style>
+        input[ type="radio"][name="gender"]:checked{
+        accent-color: deeppink;
+    }
+    </style>
+</head>
+<body>
+    <h1>Create an account</h1>
+    <p><strong> It's free and always will be. </strong></p>
+
+    <form>
+        <label for="firstname"> </label>
+        <input type="text" id="firstname" name="firstname" placeholder="Firstname">
+
+        <label for="Surname"></label>
+        <input type="text" id="Surname" name="Surname" placeholder="Surname">
+        
+        <br><br>
+        
+        <label for="Email"></label>
+        <input type="email" id="Email" name="Email" placeholder="Email address">
+
+        <br><br>
+
+        <label for="Password"></label>
+        <input type="password" id="password" name="Password" placeholder="New password">
+
+        <br>
+        <p><strong>Birthday </strong></p>
+        <label for="Birthday"></label>
+        <select name="Date_birth" id="Date_birth"></select>
+        <select name="month_birth" id="month_birth"></select>
+        <select name="year_birth" id="year_birth"></select>
+
+        <script>
+            const day_birth = document .getElementById('Date_birth');
+            for (let i=1; i<=31; i++){
+                const option = document .createElement('option');
+                option .value = i;
+                option . text = i;
+                day_birth .appendChild(option);
+            }
+
+            const month_birth = document .getElementById('month_birth');
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            months .forEach((months, index) => {
+                const option = document .createElement('option');
+                option .value = months.toLowerCase();
+                option .text = months;
+                month_birth.appendChild(option);
+            });
+
+            const year_birth = document .getElementById('year_birth');
+            const currentYear = new Date().getFullYear();
+            for (let i=currentYear; i >= 1900; i--){
+                const option = document.createElement('option');
+                option .value = i;
+                option .text = i;
+                year_birth.appendChild(option);
+            }
+        </script>
+
+        <br><br>
+        <label for="gender"></label>
+        <input type="radio" id="male" name="gender" value="male" style="background-color: deeppink;">
+        <label for="male"> <strong>Male</strong></label>
+        
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female"><strong>Female</strong></label>
+
+        <br><br>
+        <button type="submit">Sign up</button>
+
+    </form>
+    
+</body>
+</html>
