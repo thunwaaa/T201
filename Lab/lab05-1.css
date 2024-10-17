@@ -1,0 +1,56 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, rgb(247, 112, 112),rgb(255, 150, 168))
+}
+
+.box1 {
+    width: 150px;
+    height: 20px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgba(0, 26, 255, 0.849);
+    color: white;
+}
+
+.box2 {
+    width: 150px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid gray;
+    margin-top: -15px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.list-item {
+    display: flex;
+    align-items: center; /* จัดไอเท็มให้อยู่ในแถวเดียวกัน */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+.list-item img {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px; /* ระยะห่างระหว่างรูปกับข้อความ */
+    margin-left: 0; /* ชิดซ้าย */
+}
+
+.list-item span {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
